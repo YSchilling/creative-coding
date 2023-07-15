@@ -3,7 +3,7 @@ use nannou::prelude::*;
 const POINT_SIZE: f32 = 2.;
 const TIMER_INCREMENT: f32 = 0.02; //Speed of drawing
 const DOT_SPACING: f32 = 1.;
-const DOT_COUNT: usize = 100;
+const DOT_COUNT: usize = 80;
 
 struct Model {
     timer: f32,
