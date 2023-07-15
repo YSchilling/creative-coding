@@ -8,7 +8,7 @@ struct Model {
     timer: f32,
 }
 
-pub fn parametric_equation5() {
+pub fn example5() {
     nannou::app(model).update(update).simple_window(view).run();
 }
 
