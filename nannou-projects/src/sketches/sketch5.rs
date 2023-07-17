@@ -8,7 +8,8 @@ struct Model {
     timer: f32,
 }
 
-pub fn example5() {
+#[allow(dead_code)]
+pub fn run() {
     nannou::app(model).update(update).simple_window(view).run();
 }
 

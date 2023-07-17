@@ -1,15 +1,16 @@
 use nannou::prelude::*;
 
 const POINT_SIZE: f32 = 2.;
-const TIMER_INCREMENT: f32 = 0.04; //Speed of drawing
-const DOT_SPACING: f32 = 4.;
+const TIMER_INCREMENT: f32 = 0.01; //Speed of drawing
+const DOT_SPACING: f32 = 10.;
 const DOT_COUNT: usize = 12;
 
 struct Model {
     timer: f32,
 }
 
-pub fn example2() {
+#[allow(dead_code)]
+pub fn run() {
     nannou::app(model).update(update).simple_window(view).run();
 }
 
@@ -22,11 +23,11 @@ fn update(_app: &App, _model: &mut Model, _update: Update) {
 }
 
 fn x1(t: f32) -> f32 {
-    (t * 0.4).sin() * 100.
+    (t * 2.).sin() * 50.
 }
 
 fn y1(t: f32) -> f32 {
-    (t * 2.).cos() * 20.
+    t.cos() * 50.
 }
 
 fn x2(t: f32) -> f32 {
@@ -34,7 +35,7 @@ fn x2(t: f32) -> f32 {
 }
 
 fn y2(t: f32) -> f32 {
-    t.cos() * 100.
+    (t * 2.).cos() * 100. - (t / 3.).cos() * 150.
 }
 
 fn view(_app: &App, _model: &Model, _frame: Frame) {
@@ -53,6 +54,12 @@ fn view(_app: &App, _model: &Model, _frame: Frame) {
             .color(rgb(color, color, color))
             .start(vec2(x1(t), y1(t)))
             .end(vec2(x2(t), y2(t)))
+            .weight(POINT_SIZE);
+
+        draw.line()
+            .color(rgb(color, 0, 0))
+            .start(vec2(x1(t), -y1(t)))
+            .end(vec2(x2(t), -y2(t)))
             .weight(POINT_SIZE);
     }
 
