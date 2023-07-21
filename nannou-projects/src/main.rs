@@ -1,5 +1,5 @@
 mod sketches;
 
 fn main() {
-    sketches::sketch7::run();
+    sketches::sketch6::run();
 }
