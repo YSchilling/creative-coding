@@ -6,6 +6,8 @@ I use this repository to collect all kinds of creative coding sketches.
 
 ## Examples
 
+**HINT:** The quality of the following examples is way lower than if you ran the programs on your machine. So please clone the repo and try them out!
+
 ### Sketch 1
 
 <img src="/media/sketch1.gif" alt="sketch1.gif">
