@@ -15,6 +15,7 @@ struct Model {
 
 const N_THINGS: usize = 80;
 
+#[allow(dead_code)]
 pub fn run() {
     nannou::app(model).update(update).run();
 }
