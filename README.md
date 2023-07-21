@@ -6,7 +6,4 @@ I use this repository to collect all kinds of creative coding sketches.
 
 Here are some examples of my work:
 
-<video>
-    <source src="media/sketch6.mp4" type="video/mp4">
-    Can't load media
-</video>
+<img src="/media/sketch6.gif" alt="sketch6.gif">
